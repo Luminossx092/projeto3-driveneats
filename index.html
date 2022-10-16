@@ -104,7 +104,7 @@
       </div>
     </div>
   </div>
-  <div class="confirmacaoPedido invisivel">
+  <div data-test="confirmation-dialog" class="confirmacaoPedido invisivel">
     <div class="confirmePedido">
       <h1>Confirme seu pedido</h1>
     </div>
@@ -122,15 +122,14 @@
         <p>preco</p>
       </div>
       <div class="totalPedido">
-        <h1>Total</h1>
+        <h1>TOTAL</h1>
         <h2>R$ </h2>
       </div>
     </div>
-
     <div  onclick="OpenWhatsup()" class="FazerPedido">
       <h1>Tudo certo, pode pedir!</h1>
     </div>
-    <div class="cancelar">
+    <div onclick="CancelarPedido()" class="cancelar">
       <h1>Cancelar</h1></button>
     </div>
   </div>

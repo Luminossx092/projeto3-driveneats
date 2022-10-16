@@ -66,6 +66,9 @@ function PromptFinalizarPedido() {
     else alert("Escolha um prato, uma bebida e uma sobremesa para poder fazer o pedido!");
 }
 
+function CancelarPedido(){
+    document.querySelector('.confirmacaoPedido').classList.add("invisivel");
+}
 function OpenWhatsup() {
     let nome = prompt("Informe seu Nome:");
     let endereco = prompt("Agora informe seu endereco:");
