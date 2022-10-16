@@ -21,6 +21,7 @@
         justify-content: space-around;
         align-items: flex-start;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        z-index: 1;
     }
 
     .Cabecalho h1 {
@@ -116,7 +117,7 @@
     }
 
     ion-icon {
-        color:  #32B72F;
+        color: #32B72F;
         font-size: 18px;
         position: absolute;
         bottom: 6px;
@@ -127,7 +128,8 @@
     .selecionado {
         border-color: #32B72F;
     }
-    .selecionado ion-icon{
+
+    .selecionado ion-icon {
         display: inline;
     }
 
@@ -173,4 +175,90 @@
     .finalizarPedidoAtivado p {
         font-weight: 700;
         color: white;
+    }
+    
+    .confirmacaoPedido {
+        width: 377px;
+        height: 353px;
+        border-radius: 9px;
+        padding:0 24px;
+        padding-top: 20px;
+        position: fixed;
+        top: calc(50% - 353px/2);
+        left: 19px;
+        background-color: #50D074;
+        box-shadow: 0px 0px 10px 1px #00000040;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+ 
+    .confirmacaoPedido h1{
+        color: white;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 26px;
+    }
+
+    .pedidosEPrecos{
+        width: 100%;
+    }
+    .confirmePedido{
+        width: 100%;
+        height:40px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .itemPedido{
+        width: 100%;
+        height: 27px;
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        color:white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .totalPedido{
+        width: 100%;
+        height: 27px;
+        margin-bottom: 20px;
+        color:white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .totalPedido h2{
+        color: white;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 26px;
+    }
+    .FazerPedido{
+        height: 52px;
+        width: 329px;
+        border-radius: 100px;
+        background-color: white;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .FazerPedido h1{
+        color:  #50D074;
+    }
+    .cancelar{
+        height: 52px;
+        width: 329px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .invisivel{
+        display: none;
     }

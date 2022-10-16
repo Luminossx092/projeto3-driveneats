@@ -26,33 +26,57 @@ function SelecionarOvertable(mesa) {
     checkPedido()
 }
 function checkPedido() {
-    if (dish != null && drink != null && overtable != null){FinalizarPedidoAtivar()}
+    if (dish != null && drink != null && overtable != null) { FinalizarPedidoAtivar() }
 }
-let pedidoPronto =false;
+let pedidoPronto = false;
 function FinalizarPedidoAtivar() {
     const element = document.querySelector(".caixaCinza");
     element.innerHTML = "Finalizar pedido";
     element.classList.add("finalizarPedidoAtivado");
     pedidoPronto = true;
 }
-function OpenWhatsup(){
-    if(pedidoPronto){
-        let nomeDish =  dish.querySelector("h3").innerHTML;
-        nomeDish = nomeDish.substr(3,nomeDish.length);
-        nomeDish = nomeDish.replace(',','.');
-        let nomeDrink =  drink.querySelector("h3").innerHTML;
-        nomeDrink = nomeDrink.substr(3,nomeDrink.length);
-        nomeDrink = nomeDrink.replace(',','.');
-        let nomeDessert =  overtable.querySelector("h3").innerHTML;
-        nomeDessert = nomeDessert.substr(3,nomeDessert.length);
-        nomeDessert = nomeDessert.replace(',','.');
-        let valorAPagar = (Number(nomeDish) + Number(nomeDrink) + Number(nomeDessert)).toFixed(2);
-        let texto = `Olá, gostaria de fazer o pedido:
-        - Prato: ${dish.querySelector("h2").innerHTML }
+let total = 0;
+function PromptFinalizarPedido() {
+    if (pedidoPronto) {
+        let prompt = document.querySelector('.confirmacaoPedido');
+        prompt.classList.remove("invisivel");
+
+        prompt.querySelector(".principal h2").innerHTML = dish.querySelector("h2").innerHTML;
+        let nomeDish = dish.querySelector("h3").innerHTML;
+        nomeDish = nomeDish.substr(3, nomeDish.length)
+        prompt.querySelector(".principal p").innerHTML = nomeDish;
+        nomeDish = nomeDish.replace(',', '.');
+
+
+        prompt.querySelector(".bebida h2").innerHTML = drink.querySelector("h2").innerHTML;
+        let nomeDrink = drink.querySelector("h3").innerHTML;
+        nomeDrink = nomeDrink.substr(3, nomeDrink.length)
+        prompt.querySelector(".bebida p").innerHTML = nomeDrink;
+        nomeDrink = nomeDrink.replace(',', '.');
+
+        prompt.querySelector(".sobremesa h2").innerHTML = overtable.querySelector("h2").innerHTML;
+        let nomeDessert = overtable.querySelector("h3").innerHTML;
+        nomeDessert = nomeDessert.substr(3, nomeDessert.length)
+        prompt.querySelector(".sobremesa p").innerHTML = nomeDessert;
+        nomeDessert = nomeDessert.replace(',', '.');
+
+        total = (Number(nomeDish) + Number(nomeDrink) + Number(nomeDessert)).toFixed(2);
+        prompt.querySelector(".totalPedido h2").innerHTML = "R$ " + total.replace('.', ',');
+    }
+    else alert("Escolha um prato, uma bebida e uma sobremesa para poder fazer o pedido!");
+}
+
+function OpenWhatsup() {
+    let nome = prompt("Informe seu Nome:");
+    let endereco = prompt("Agora informe seu endereco:");
+    let texto = `Olá, gostaria de fazer o pedido: 
+        - Prato: ${dish.querySelector("h2").innerHTML}
         - Bebida: ${drink.querySelector("h2").innerHTML}
         - Sobremesa: ${overtable.querySelector("h2").innerHTML}
-        Total: R$ ${valorAPagar}`;
-        window.open(`https://wa.me/?text=${encodeURIComponent(texto)}`);
-    }
-    else alert("Escolha um prato, uma bebida e uma sobremesa para poder finalizar o pedido!");
+        Total: R$ ${total}
+        
+        Nome: ${nome}
+        Endereço: ${endereco}`;
+
+    window.open(`https://wa.me/?text=${encodeURIComponent(texto)}`);
 }
