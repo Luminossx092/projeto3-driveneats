@@ -148,3 +148,11 @@
         color: #FFFFFF;
         text-align: center;
     }
+    .finalizarPedidoAtivado{
+        background-color:  #32B72F;
+
+    }
+    .finalizarPedidoAtivado p{
+        font-weight: 700;
+        color: white;
+    }

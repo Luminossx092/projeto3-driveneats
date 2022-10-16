@@ -51,19 +51,19 @@
           <h1>Agora, sua bebida</h1>
         </div>
         <div class="itensCardapio opcoesBebidas" data-test="drinks">
-          <div onclick="Selecionar(this)" data-test="food-option" class="prato bebida">
+          <div onclick="SelecionarBebida(this)" data-test="food-option" class="prato bebida">
             <img src="./Images/coquinha_gelada 1.png" alt="">
             <h2>coquinha gelada</h2>
             <p>Lata 350ml</p>
             <h3>R$ 4,90</h3>
           </div>
-          <div onclick="Selecionar(this)" data-test="food-option" class="prato bebida">
+          <div onclick="SelecionarBebida(this)" data-test="food-option" class="prato bebida">
             <img src="./Images/Vodka-scorpion.jpg" alt="">
             <h2>vodka scorpion</h2>
             <p>vodka, com uma surpresa</p>
             <h3>R$ 34,69</h3>
           </div>
-          <div onclick="Selecionar(this)" data-test="food-option" class="prato bebida">
+          <div onclick="SelecionarBebida(this)" data-test="food-option" class="prato bebida">
             <img src="./Images/seila.jpg" alt="">
             <h2>??????????</h2>
             <p>??????????</p>
@@ -76,19 +76,19 @@
           <h1>Por fim, sua sobremesa</h1>
         </div>
         <div class="itensCardapio opcoesSobremesas" data-test="desserts">
-          <div onclick="Selecionar(this)" data-test="food-option" class="prato sobremesa">
+          <div onclick="SelecionarOvertable(this)" data-test="food-option" class="prato sobremesa">
             <img src="./Images/pudim 1.png" alt="">
             <h2>Pudim</h2>
             <p>Apenas pudim</p>
             <h3>R$ 7,90</h3>
           </div>
-          <div onclick="Selecionar(this)" data-test="food-option" class="prato sobremesa">
+          <div onclick="SelecionarOvertable(this)" data-test="food-option" class="prato sobremesa">
             <img src="./Images/Brigadeiro.jpg" alt="">
             <h2>brigadeiro</h2>
             <p>6 unidades</p>
             <h3>R$ 14,85</h3>
           </div>
-          <div onclick="Selecionar(this)" data-test="food-option" class="prato sobremesa">
+          <div onclick="SelecionarOvertable(this)" data-test="food-option" class="prato sobremesa">
             <img src="./Images/Sorvete.jpg" alt="">
             <h2>Sorvete</h2>
             <p>Duas bolas</p>
@@ -99,7 +99,8 @@
     </div>
     <div class="caixaMisteriosa"></div>
     <div class="Rodape">
-      <div data-test="finish-button" class="caixaCinza"><p>Selecione os 3 itens para fechar o pedido</p></div>
+      
+      <div onclick="OpenWhatsup()" data-test="finish-button" class="caixaCinza"><p>Selecione os 3 itens para fechar o pedido</p></div>
     </div>
   </main>
   <script src="script.js"></script>
