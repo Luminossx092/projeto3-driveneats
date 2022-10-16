@@ -38,17 +38,17 @@
 
     .Conteudo {
         margin-top: 123px;
-        margin-left: 19px;
+        padding: 0 19px;
         width: 414px;
         display: flex;
         flex-direction: column;
-
     }
 
     .opcaoComida {
         margin-bottom: 27px;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
     }
 
     .tituloPedido {
@@ -64,7 +64,7 @@
     .itensCardapio {
         display: flex;
         justify-content: start;
-
+        overflow-x: scroll
     }
 
     .prato {
@@ -72,12 +72,14 @@
         height: 216px;
         margin-right: 16px;
         padding: 14px;
+        border: 5px solid white;
         background-color: white;
         box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
         border-radius: 9px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        align-items: center;
     }
 
     .prato img {
@@ -92,11 +94,11 @@
         font-weight: 700;
         text-align: left;
         line-height: 18px;
-        margin-bottom: 8px;
+        margin:5px 0;
     }
 
     .prato p {
-        width: 147px;
+        width: 139px;
         font-size: 15px;
         font-weight: 300;
         line-height: 18px;
@@ -104,7 +106,7 @@
     }
 
     .prato h3 {
-        width: 66px;
+        width: 139px;
         font-size: 16px;
         margin-top: 8px;
         font-weight: 400;
@@ -112,6 +114,9 @@
         line-height: 18px;
     }
 
+    .selecionado{
+        border-color: #32B72F;
+    }
     .caixaMisteriosa{
         height: 81px;
     }
