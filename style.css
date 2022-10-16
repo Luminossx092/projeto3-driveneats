@@ -80,6 +80,7 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        position: relative;
     }
 
     .prato img {
@@ -94,7 +95,7 @@
         font-weight: 700;
         text-align: left;
         line-height: 18px;
-        margin:5px 0;
+        margin: 5px 0;
     }
 
     .prato p {
@@ -114,12 +115,26 @@
         line-height: 18px;
     }
 
-    .selecionado{
+    ion-icon {
+        color:  #32B72F;
+        font-size: 18px;
+        position: absolute;
+        bottom: 6px;
+        right: 6px;
+        display: none;
+    }
+
+    .selecionado {
         border-color: #32B72F;
     }
-    .caixaMisteriosa{
+    .selecionado ion-icon{
+        display: inline;
+    }
+
+    .caixaMisteriosa {
         height: 81px;
     }
+
     .Rodape {
         height: 92px;
         width: 414px;
@@ -142,17 +157,20 @@
         justify-content: center;
         align-items: center;
     }
-    .caixaCinza p{
+
+    .caixaCinza p {
         font-size: 20px;
         font-weight: 400;
         color: #FFFFFF;
         text-align: center;
     }
-    .finalizarPedidoAtivado{
-        background-color:  #32B72F;
+
+    .finalizarPedidoAtivado {
+        background-color: #32B72F;
 
     }
-    .finalizarPedidoAtivado p{
+
+    .finalizarPedidoAtivado p {
         font-weight: 700;
         color: white;
     }

@@ -8,9 +8,7 @@
   <title>Driven Eats</title>
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
-
 <body>
   <main>
     <div class="Cabecalho">
@@ -29,6 +27,7 @@
             <p>Um pouco de batata</p>
             <p>Um pouco de salada</p>
             <h3>R$ 14,90</h3>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div onclick="Selecionar(this)" data-test="food-option" class="prato principal">
             <img src="./Images/burguer.jpg" alt="">
@@ -36,6 +35,7 @@
             <p>Não acompanha batata</p>
             <p>Tamanho P</p>
             <h3>R$ 22,69</h3>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div onclick="Selecionar(this)" data-test="food-option" class="prato principal">
             <img src="./Images/ovo.jpg" alt="">
@@ -43,6 +43,7 @@
             <p>Um ovo cozido</p>
             <p>Acompanha pão</p>
             <h3>R$ 420,69</h3>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
         </div>
       </div>
@@ -56,18 +57,21 @@
             <h2>coquinha gelada</h2>
             <p>Lata 350ml</p>
             <h3>R$ 4,90</h3>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div onclick="SelecionarBebida(this)" data-test="food-option" class="prato bebida">
             <img src="./Images/Vodka-scorpion.jpg" alt="">
             <h2>vodka scorpion</h2>
             <p>vodka, com uma surpresa</p>
             <h3>R$ 34,69</h3>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div onclick="SelecionarBebida(this)" data-test="food-option" class="prato bebida">
             <img src="./Images/seila.jpg" alt="">
             <h2>??????????</h2>
             <p>??????????</p>
             <h3>R$ 1,00</h3>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
         </div>
       </div>
@@ -81,29 +85,32 @@
             <h2>Pudim</h2>
             <p>Apenas pudim</p>
             <h3>R$ 7,90</h3>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div onclick="SelecionarOvertable(this)" data-test="food-option" class="prato sobremesa">
             <img src="./Images/Brigadeiro.jpg" alt="">
             <h2>brigadeiro</h2>
             <p>6 unidades</p>
             <h3>R$ 14,85</h3>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div onclick="SelecionarOvertable(this)" data-test="food-option" class="prato sobremesa">
             <img src="./Images/Sorvete.jpg" alt="">
             <h2>Sorvete</h2>
             <p>Duas bolas</p>
             <h3>R$ 5,75</h3>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
         </div>
       </div>
     </div>
     <div class="caixaMisteriosa"></div>
-    <div class="Rodape">
-      
+    <div class="Rodape">   
       <div onclick="OpenWhatsup()" data-test="finish-button" class="caixaCinza"><p>Selecione os 3 itens para fechar o pedido</p></div>
     </div>
   </main>
   <script src="script.js"></script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 
 </html>
